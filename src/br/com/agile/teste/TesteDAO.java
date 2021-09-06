@@ -20,7 +20,7 @@ public class TesteDAO {
 			//Usuario vinicius = AgileDAO.selecionarUsuario("vinimance@gmail.com");
 			//System.out.print(vinicius.toString());
 			
-			AgileDAO.alterar(usuario);
+			//AgileDAO.alterar(usuario);
 			
 		} catch (Exception e) {
 			System.out.println(e);

@@ -1,7 +1,5 @@
 package br.com.agile.beans;
 
-import java.util.UUID;
-
 public class Usuario {
 
 	private int id;
@@ -38,11 +36,6 @@ public class Usuario {
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
-		
-		if (!this.id) {
-			this.id = new UUID();	
-		}
-		
 	}
 
 	public Usuario() {

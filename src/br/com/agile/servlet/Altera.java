@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.agile.beans.*;
 import br.com.agile.dao.AgileDAO;
 
-@WebServlet("/cadastro")
-public class Cadastro extends HttpServlet {
+@WebServlet("/altera")
+public class Altera extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 

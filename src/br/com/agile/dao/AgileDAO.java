@@ -17,6 +17,7 @@ public class AgileDAO {
 			try {
 				
 				Connection c = new Conexao().getConnection();
+				
 				String sql = "INSERT INTO usuarios(nome, email, senha) value (?,?,?)";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
@@ -24,7 +25,9 @@ public class AgileDAO {
 				stmt.setString(1, usuario.getNome());
 				stmt.setString(2, usuario.getEmail());
 				stmt.setString(3, usuario.getSenha());
+				
 				stmt.execute(); 
+				
 				stmt.close();
 					
 				c.close();	
@@ -38,19 +41,24 @@ public class AgileDAO {
 			return resultado;
 		}
 		
-		public static boolean apagar(Usuario usuario, String nome, String email, String senha) {
+		public static boolean alterar(Usuario usuario, String nome, String email, String senha) {
 			
 			boolean resultado = false;
 			
 			try {
 				
 				Connection c = new Conexao().getConnection();
-				//update usuarios set nome = "josé", email = "teste@teste.com", senha = "4321" where email="vinimance@gmail.com" ;
-				String sql = "UPDATE USUARIOS SET nome = ?, senha = ? WHERE;
+				
+				String sql = "UPDATE USUARIOS SET nome = ?, email = ?,senha = ? WHERE id=1";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
-					
+				
+				stmt.setString(1, "nome");
+				stmt.setString(2, "email");
+				stmt.setString(3, "senha");
+				
 				stmt.execute(); 
+				
 				stmt.close();
 					
 				c.close();	
@@ -58,37 +66,42 @@ public class AgileDAO {
 				resultado = true;
 				
 			} catch (SQLException e) {
+				
 				System.out.print("Erro: ");
+				
 				e.printStackTrace();
+				
 			}
+			
 			return resultado;
+			
 		}
 	
-		public static boolean alterar(String email) {
-			
-			boolean resultado = false;
-			
-			try {
-				
-				Connection c = new Conexao().getConnection();
-				
-				String sql = "SELECT nome, email, senha FROM usuarios WHERE email='"+email+"'";
-				
-				PreparedStatement stmt = c.prepareStatement(sql);
-					
-				stmt.execute(); 
-				stmt.close();
-					
-				c.close();	
-				
-				resultado = true;
-				
-			} catch (SQLException e) {
-				System.out.print("Erro: ");
-				e.printStackTrace();
-			}
-			return resultado;
-		}
+//		public static boolean alterar(String email) {
+//			
+//			boolean resultado = false;
+//			
+//			try {
+//				
+//				Connection c = new Conexao().getConnection();
+//				
+//				String sql = "SELECT nome, email, senha FROM usuarios WHERE email='"+email+"'";
+//				
+//				PreparedStatement stmt = c.prepareStatement(sql);
+//					
+//				stmt.execute(); 
+//				stmt.close();
+//					
+//				c.close();	
+//				
+//				resultado = true;
+//				
+//			} catch (SQLException e) {
+//				System.out.print("Erro: ");
+//				e.printStackTrace();
+//			}
+//			return resultado;
+//		}
 		
 		public static Usuario selecionarUsuario(String email) {
 			
@@ -110,14 +123,20 @@ public class AgileDAO {
 				}
 				
 				stmt.execute(); 
+				
 				stmt.close();
 					
 				c.close();	
 				
 			} catch (SQLException e) {
+				
 				System.out.print("Erro: ");
+				
 				e.printStackTrace();
+				
 			}
+			
 			return usuario;
+			
 		}
 }
