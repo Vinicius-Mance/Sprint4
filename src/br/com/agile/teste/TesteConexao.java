@@ -15,7 +15,7 @@ public class TesteConexao {
 			
 		} catch (Exception e) {
 			
-			System.out.println("Erro de conexão");
+			System.out.println("Erro de conexão" + e);
 			
 		}
 		
