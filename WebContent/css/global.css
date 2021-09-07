@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+button {
+	cursor: pointer;
+}
+
+:root {
+    --light-gray: #F5F7FA;
+    --light-black: #737D8C;
+    --blue-theme: #0068FF;
+    --blue-theme--hover: #0a5fda;
+    --light-blue: #BFD9FF;
+    --blue-secondary: #0049BF;
+    --blue-dark: #001029;
+	--danger-theme: #eb3b5a;
+	--success-theme: #20bf6b;
+}
+
+
+.spinner {
+    border: 5px solid var(--light-gray);
+    border-left-color: var(--light-blue);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin:  0 auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.none {
+    display: none;
+}
