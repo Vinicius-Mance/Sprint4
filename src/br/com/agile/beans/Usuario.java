@@ -1,8 +1,10 @@
 package br.com.agile.beans;
 
+import java.util.UUID;
+
 public class Usuario {
 
-	private int id;
+	private String id;
 	private String nome;
 	private String email;
 	private String senha;
@@ -33,6 +35,7 @@ public class Usuario {
 
 	public Usuario(String nome, String email, String senha) {
 		super();
+		this.id = UUID.randomUUID().toString();
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
@@ -40,6 +43,7 @@ public class Usuario {
 
 	public Usuario() {
 		super();
+		this.id = UUID.randomUUID().toString();
 	}
 
 
