@@ -45,6 +45,7 @@ button {
 
 :root {
     --light-gray: #F5F7FA;
+		--gray: #737D8C;
     --light-black: #737D8C;
     --blue-theme: #0068FF;
     --blue-theme--hover: #0a5fda;
