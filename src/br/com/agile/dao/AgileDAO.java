@@ -17,16 +17,15 @@ public class AgileDAO {
 				
 				Connection c = new Conexao().getConnection();
 				
-				String sql = "INSERT INTO usuarios(id, nome, email, senha, numero, cpf) value (?, ?, ?, ?, ?,? )";
+				String sql = "INSERT INTO usuarios(nome, email, senha, numero, cpf) value (?, ?, ?, ?, ? )";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
 					
-				stmt.setString(1, usuario.getId());
-				stmt.setString(2, usuario.getNome());
-				stmt.setString(3, usuario.getEmail());
-				stmt.setString(4, usuario.getSenha());
-				stmt.setInt(5, usuario.getNumero());
-				stmt.setString(6, usuario.getCPF());
+				stmt.setString(1, usuario.getNome());
+				stmt.setString(2, usuario.getEmail());
+				stmt.setString(3, usuario.getSenha());
+				stmt.setInt(4, usuario.getNumero());
+				stmt.setString(5, usuario.getCPF());
 
 				stmt.execute();
 				
