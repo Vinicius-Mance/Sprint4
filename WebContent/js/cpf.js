@@ -1,10 +1,12 @@
 let campoCpf = document.getElementById('campoCpf');
 let erroCpf = document.getElementById('erroCpf');
 
-const testarCpf = () => {
+campoCpf.onkeyup = function () { mascaraCpf(); }
+
+const testarCpf = (varCampoCpf) => {
   let soma = 0;
   let resto;
-  let cpf = campoCpf.value;
+  let cpf = varCampoCpf.value.replace(/\D+/g, '');
 
   if (!cpf ||
       cpf.length != 11 ||
@@ -53,26 +55,27 @@ const testarCpf = () => {
 
 }
 
-document.addEventListener('click', function(e) {
+const mascaraCpf = () => {
 
-  testarCpf();
+  erroCpf.innerHTML = "";
 
-  let cliqueDentro = campoCpf.contains(event.target);
+  campoCpf.value = campoCpf.value
+  .replace(/\D+/g, '')
+  .replace(/(\d{3})(\d)/, '$1.$2')
+  .replace(/(\d{3})(\d)/, '$1.$2')
+  .replace(/(\d{3})(\d)/, '$1-$2')
+  .replace(/(-\d{2})\d+?$/, '$1');
 
-  if (!cliqueDentro && testarCpf() == false) {
-    erroCpf.innerHTML = "Insira um CPF válido";
-  } else {
-    erroCpf.innerHTML  = "";
+    if (!testarCpf(campoCpf)) {
+      erroCpf.innerHTML = "Insira um CPF válido";
+    }
+
   }
 
-});
+document.getElementById('formularioCpf').onsubmit = function(e){
 
-document.getElementById('botaoCpf').onclick = function(e){
-
-  if (!testarCpf()) {
+  if (!testarCpf(campoCpf)) {
     e.preventDefault();
   }
-
-  console.log(testarCpf());
 
 }

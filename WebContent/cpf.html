@@ -13,13 +13,16 @@
 
     <form action="cpf.html" id="formularioCpf" method="post">
       <div class="campos">
-        <label for="campoCpf">Qual é o seu CPF?</label>
-        <span>CPF</span>
-        <span class="erro" id="erroCpf"></span>
-<!-- [a-z0-9]{3,50}@[a-z0-9]{2,50}.[a-z]{2,3} -->
-        <input required type="text" id="campoCpf" name="campoCpf" placeholder="123.456.789-09" pattern="/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/">
+      <h1>Criar conta</h1>
+        <span>Qual é o seu CPF?</span>
+        <label for="campoCpf">CPF
+        <input required type="text" id="campoCpf" name="campoCpf" placeholder="123.456.789-09">
+        </label>
       </div>
-      <button type="submit" id="botaoCpf" name="button">Avançar</button>
+      <span class="erro" id="erroCpf"></span>
+      <button type="submit" id="botaoCpf" name="button">
+        Avançar
+      </button>
     </form>
 
     <script type="text/javascript" src="./js/cpf.js"></script>
