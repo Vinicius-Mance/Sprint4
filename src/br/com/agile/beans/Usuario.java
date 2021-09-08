@@ -60,7 +60,9 @@ public class Usuario {
 	}
 
 	public Usuario(String id, String nome, String email, String senha, String CPF, int numero) {
-		this.id = UUID.randomUUID().toString();
+		if(this.id == null) {
+			this.id = UUID.randomUUID().toString();
+		}
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
@@ -69,7 +71,9 @@ public class Usuario {
 	}
 
 	public Usuario() {
-		this.id = UUID.randomUUID().toString();
+		if(this.id == null) {
+			this.id = UUID.randomUUID().toString();
+		}
 	}
 
 	@Override

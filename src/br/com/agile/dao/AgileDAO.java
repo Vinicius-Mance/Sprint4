@@ -17,7 +17,7 @@ public class AgileDAO {
 				
 				Connection c = new Conexao().getConnection();
 				
-				String sql = "INSERT INTO usuarios(id, nome, email, senha, numero, cpf) value (?, ?, ?, ?, ? )";
+				String sql = "INSERT INTO usuarios(nome, email, senha, numero, cpf) value (?, ?, ?, ?, ? )";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
 					
