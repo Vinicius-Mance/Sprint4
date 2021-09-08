@@ -52,6 +52,9 @@ form button {
 }
 
 .erro {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
   font-weight: bold;
   font-size: 1rem;
   color: var(--danger-theme);
