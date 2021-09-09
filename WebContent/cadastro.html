@@ -35,13 +35,23 @@
 
       <!-- #campoSenha-->
       <div class="campos">
+
         <span>Crie sua senha</span>
 
-        <label for="campoSenha">
-          Senha
+        <div id="grupoSenha">
+
+          <label for="campoSenha">
+              Senha
+          </label>
+
           <input type="password" id="campoSenha" name="campoSenha" placeholder="*********">
-          <img src="./img/eye-icon.svg" id="verSenha" lt="ver senha">
-        </label>
+
+          <div id="iconesOlhos">
+            <img src="./img/eye-icon.svg" id="verSenha" alt="ver senha">
+            <img src="./img/closed-eye-icon.png" id="esconderSenha" alt="ver senha">
+          </div>
+
+        </div>
 
         <span class="erro" id="erroSenha"></span>
       </div>
@@ -59,7 +69,7 @@
         <div class="campos">
           <span>Qual é o seu número de telefone?</span>
           <label for="campoTelefone">Telefone
-          <input   type="text" id="campoTelefoneTelefone" name="campoTelefone" placeholder="(00) 9-1234-5678">
+          <input   type="text" id="campoTelefone" name="campoTelefone" placeholder="(00) 9-1234-5678">
           </label>
           <span class="erro" id="erroTelefone"></span>
         </div>

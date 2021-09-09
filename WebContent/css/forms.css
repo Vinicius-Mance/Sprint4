@@ -70,9 +70,32 @@ h1 {
   padding: 15px 0 0 0;
 }
 
-#verSenha {
-  position: relative;
+#verSenha, #esconderSenha {
   width: 2rem;
-  border: solid 1px red;
-  top: 0;
+}
+
+#verSenha {
+  display: none;
+}
+
+#grupoSenha {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  margin: 0 auto;
+  border-bottom: solid 1px var(--gray);
+}
+
+label[for=campoSenha] {
+  width: 100%;
+  border: none;
+}
+
+#iconesOlhos {
+  width: 2.5rem;
+}
+
+#grupoSenha input {
+  width: calc(100% - 2.5rem);
 }
