@@ -9,7 +9,7 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private String CPF;
-	private int numero;
+	private String numero;
 
 	public String getId() {
 		return id;
@@ -51,7 +51,7 @@ public class Usuario {
 		this.CPF = CPF;
 	}
 
-	public int getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
@@ -87,4 +87,5 @@ public class Usuario {
 				", numero=" + numero +
 				'}';
 	}
+
 }
