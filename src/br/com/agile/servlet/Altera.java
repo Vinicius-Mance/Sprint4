@@ -35,7 +35,7 @@ public class Altera extends HttpServlet {
 		usuario.setNumero(numero);
 		usuario.setSenha(senha);
 
-		if(!AgileDAO.alterar(usuario)) {
+		if(!AgileDAO.alterarUsuario(usuario)) {
 			req.setAttribute("message", "Insucesso ao Alterar.");
 		}
 

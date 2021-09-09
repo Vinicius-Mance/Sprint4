@@ -9,7 +9,7 @@ import br.com.agile.conexao.Conexao;
 
 public class AgileDAO {
 		
-		public static boolean cadastrar(Usuario usuario) {
+		public static boolean cadastrarUsuario(Usuario usuario) {
 			
 			boolean resultado = false;
 			
@@ -42,7 +42,7 @@ public class AgileDAO {
 			return resultado;
 		}
 		
-		public static boolean alterar(Usuario usuario) {
+		public static boolean alterarUsuario(Usuario usuario) {
 			
 			boolean resultado = false;
 			
