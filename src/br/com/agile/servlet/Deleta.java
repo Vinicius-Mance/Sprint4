@@ -18,17 +18,15 @@ public class Deleta extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			
-			//Usuario = new Usuario();
-		//if (AgileDAO.cadastrar(usuario)) {
-		//		request.setAttribute("message", "Usuário cadastrado com sucesso"
-		//+ "<a href=index.jsp> Voltar </a>");
-						//	} else {
-						//		request.setAttribute("message", "Falha no cadastro. Tente novamente");
-						//	}
-			
-						//	RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrar.jsp");
-						//	dispatcher.forward(request, response);
-			
+
+		String id = req.getParameter("id");
+
+		if(!AgileDAO.alterar(id)) {
+			req.setAttribute("message", "Insucesso ao Deletar.");
+		}
+
+		req.setAttribute("message", "Sucesso ao Deletar.");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+		dispatcher.forward(req, res);
 	}
 }
