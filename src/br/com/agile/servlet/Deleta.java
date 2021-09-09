@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.agile.beans.*;
 import br.com.agile.dao.AgileDAO;
 
 @WebServlet("/deleta")
@@ -17,11 +16,11 @@ public class Deleta extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		String id = req.getParameter("id");
 
-		if(!AgileDAO.alterar(id)) {
+		if(!AgileDAO.deletarUsuario(id)) {
 			req.setAttribute("message", "Insucesso ao Deletar.");
 		}
 

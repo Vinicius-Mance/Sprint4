@@ -17,8 +17,9 @@ public class Altera extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
+		int id = Integer.parseInt(req.getParameter("id"));
 		String nome = req.getParameter("nome");
 		String email = req.getParameter("email");
 		String cpf = req.getParameter("cpf");
@@ -27,6 +28,7 @@ public class Altera extends HttpServlet {
 
 		Usuario usuario = new Usuario();
 
+		usuario.setId(id);
 		usuario.setNome(nome);
 		usuario.setEmail(email);
 		usuario.setCPF(cpf);

@@ -1,21 +1,19 @@
 package br.com.agile.beans;
 
-import java.util.UUID;
-
 public class Usuario {
 
-	private String id;
+	private int id;
 	private String nome;
 	private String email;
 	private String senha;
 	private String CPF;
 	private String numero;
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -55,14 +53,11 @@ public class Usuario {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 
-	public Usuario(String id, String nome, String email, String senha, String CPF, int numero) {
-		if(this.id == null) {
-			this.id = UUID.randomUUID().toString();
-		}
+	public Usuario(String nome, String email, String senha, String CPF, String numero) {
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
@@ -71,9 +66,7 @@ public class Usuario {
 	}
 
 	public Usuario() {
-		if(this.id == null) {
-			this.id = UUID.randomUUID().toString();
-		}
+
 	}
 
 	@Override

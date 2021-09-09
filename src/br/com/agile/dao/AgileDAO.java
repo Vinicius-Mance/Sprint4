@@ -24,7 +24,7 @@ public class AgileDAO {
 				stmt.setString(1, usuario.getNome());
 				stmt.setString(2, usuario.getEmail());
 				stmt.setString(3, usuario.getSenha());
-				stmt.setInt(4, usuario.getNumero());
+				stmt.setString(4, usuario.getNumero());
 				stmt.setString(5, usuario.getCPF());
 
 				stmt.execute();
@@ -57,9 +57,9 @@ public class AgileDAO {
 				stmt.setString(1, usuario.getNome());
 				stmt.setString(2, usuario.getEmail());
 				stmt.setString(3, usuario.getSenha());
-				stmt.setInt(4, usuario.getNumero());
+				stmt.setString(4, usuario.getNumero());
 				stmt.setString(5, usuario.getCPF());
-				stmt.setString(6, usuario.getId());
+				stmt.setInt(6, usuario.getId());
 				
 				stmt.execute(); 
 				
@@ -92,7 +92,7 @@ public class AgileDAO {
 				String sql = "SELECT nome, email, senha FROM usuarios WHERE id = ?";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
-				stmt.setString(1, usuario.getId());
+				stmt.setInt(1, usuario.getId());
 				ResultSet resultado = stmt.executeQuery();
 				
 				while (resultado.next()) {
