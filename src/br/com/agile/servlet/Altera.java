@@ -22,9 +22,9 @@ public class Altera extends HttpServlet {
 		int id = Integer.parseInt(req.getParameter("id"));
 		String nome = req.getParameter("nome");
 		String email = req.getParameter("email");
-		String cpf = req.getParameter("cpf");
 		String numero = req.getParameter("numero");
 		String senha = req.getParameter("senha");
+		String cpf = req.getParameter("cpf");
 
 		Usuario usuario = new Usuario();
 
@@ -35,11 +35,12 @@ public class Altera extends HttpServlet {
 		usuario.setNumero(numero);
 		usuario.setSenha(senha);
 
-		if(!AgileDAO.alterarUsuario(usuario)) {
+		if(!AgileDAO.alterarUsuario(id,nome,email,senha,numero,cpf)) {
 			req.setAttribute("message", "Insucesso ao Alterar.");
+		} else {
+			req.setAttribute("message", "Sucesso ao Alterar.");
 		}
 
-		req.setAttribute("message", "Sucesso ao Alterar.");
 		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 		dispatcher.forward(req, res);
 	}

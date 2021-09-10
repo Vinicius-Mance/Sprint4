@@ -18,7 +18,7 @@ public class Deleta extends HttpServlet {
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-		String id = req.getParameter("id");
+		int id = Integer.parseInt(req.getParameter("id"));
 
 		if(!AgileDAO.deletarUsuario(id)) {
 			req.setAttribute("message", "Insucesso ao Deletar.");

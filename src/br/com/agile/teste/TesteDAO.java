@@ -7,21 +7,21 @@ public class TesteDAO {
 	
 	public static void main(String[] args) {
 		
-		Usuario usuario = new Usuario("vinicius","vinimance@gmail.com","1234");
+		Usuario usuario = new Usuario("vinicius","vinimance@gmail.com","1234","12312312312","12312312312");
 		
 		try {
 			
-			//AgileDAO.cadastrar(usuario);	
+			//AgileDAO.cadastrarUsuario(usuario);	
 			//System.out.println("Cadastro realizado");
 			
-			//AgileDAO.apagar(usuario);
+			//AgileDAO.deletarUsuario(1);
 			//System.out.println("Usuario apagado");
 			
-			//Usuario vinicius = AgileDAO.selecionarUsuario("vinimance@gmail.com");
+			//Usuario vinicius = AgileDAO.selecionarUsuario(2);
 			//System.out.print(vinicius.toString());
 			
-			//AgileDAO.alterar(usuario);
-			
+			//AgileDAO.alterarUsuario(2,"teste","teste","teste","teste","teste");
+			//System.out.print("usuario alterado");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
