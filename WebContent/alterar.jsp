@@ -1,6 +1,9 @@
+<%@page import="br.com.agile.beans.Usuario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+    <%@ page import="br.com.agile.conexao.Conexao" %>
+    <%@ page import="java.sql.*" %>
+
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -8,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/usuarios.css">
-    <title>Alterar</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Alterar usuários</title>
     <link rel="icon" href="./img/gitgoodLogo.png">
   </head>
   <body>
     <header>
-    <link rel="stylesheet" href="./css/header.css">
       <nav>
         <ul>
           <img src="./img/white-logo.svg" alt="BlueBenx">
@@ -25,26 +28,41 @@
     </header>
 
     <main>
-
       <table>
-        <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>Email</th>
-          <th>Senha</th>
-          <th>Número de telefone</th>
-          <th>CPF</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Vinicius</td>
-          <td>vinimance@gmail.com</td>
-          <td>1234</td>
-          <td>9-9933-5399</td>
-          <td>507.564.598.42</td>
-        </tr>
-      </table>
+      <tr>
+    	<th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Senha</th>
+        <th>Número de telefone</th>
+        <th>CPF</th>
+      </tr>
+      <%
+      try {
+    	 Connection c = new Conexao().getConnection();
 
+			String sql = "SELECT * FROM usuarios";
+
+			PreparedStatement stmt = c.prepareStatement(sql);
+			ResultSet resultado = stmt.executeQuery();
+      while(resultado.next()) {
+      %>
+      <tr>
+        <td><%=resultado.getInt("id") %></td>
+        <td><%=resultado.getString("nome") %></td>
+        <td><%=resultado.getString("email") %></td>
+        <td><%=resultado.getString("senha") %></td>
+        <td><%=resultado.getString("numero") %></td>
+        <td><%=resultado.getString("cpf") %></td>
+        
+      </tr>
+      <%
+      }
+      c.close();
+      } catch (Exception e) {
+     	 e.printStackTrace();
+      }
+      %>
     </main>
 
     <script type="text/javascript" src="./js/usuarios.js"></script>

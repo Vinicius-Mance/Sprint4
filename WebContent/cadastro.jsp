@@ -14,12 +14,12 @@
   <body>
     <h1>Criar conta</h1>
 
-    <form action="cadastro.html" id="formularioCadastro" method="post">
+    <form action="${pageContext.request.contextPath}/cadastro" id="formularioCadastro" method="post">
     <!-- #campoNome -->
       <div class="campos">
         <span>Qual é o seu nome?</span>
         <label for="campoNome">Nome
-          <input   type="text" id="campoNome" name="campoNome" placeholder="John Doe">
+          <input   type="text" id="campoNome" name="nome" placeholder="John Doe">
         </label>
         <span class="erro" id="erroNome"></span>
       </div>
@@ -30,7 +30,7 @@
 
         <label for="campoEmail">
           E-mail
-          <input   type="email" id="campoEmail" name="campoEmail" placeholder="seuemail@hotmail.com">
+          <input   type="email" id="campoEmail" name="email" placeholder="seuemail@hotmail.com">
         </label>
         <span class="erro" id="erroEmail"></span>
       </div>
@@ -46,7 +46,7 @@
               Senha
           </label>
 
-          <input type="password" id="campoSenha" name="campoSenha" placeholder="*********">
+          <input type="password" id="campoSenha" name="senha" placeholder="*********">
 
           <div id="iconesOlhos">
             <img src="./img/eye-icon.svg" id="verSenha" alt="ver senha">
@@ -62,7 +62,7 @@
       <div class="campos">
         <span>Qual é o seu CPF?</span>
         <label for="campoCpf">CPF
-        <input   type="text" id="campoCpf" name="campoCpf" placeholder="123.456.789-09">
+        <input   type="text" id="campoCpf" name="cpf" placeholder="123.456.789-09">
         </label>
         <span class="erro" id="erroCpf"></span>
       </div>
@@ -71,7 +71,7 @@
         <div class="campos">
           <span>Qual é o seu número de telefone?</span>
           <label for="campoTelefone">Telefone
-          <input   type="text" id="campoTelefone" name="campoTelefone" placeholder="(00) 9-1234-5678">
+          <input   type="text" id="campoTelefone" name="numero" placeholder="(00) 9-1234-5678">
           </label>
           <span class="erro" id="erroTelefone"></span>
         </div>

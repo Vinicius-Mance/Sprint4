@@ -3,11 +3,12 @@ package br.com.agile.conexao;
 import java.sql.*;
 
 public class Conexao {
-
 	public Connection getConnection() throws SQLException {
-		//return DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl","rm87985","100901");
-		return DriverManager.getConnection("jdbc:mysql://localhost/fiap","root","");
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			return DriverManager.getConnection("jdbc:mysql://localhost/fiap","root","");
+		} catch (ClassNotFoundException e) {
+			throw new SQLException(e.getException());
+		}
 	}
-	
-
 }

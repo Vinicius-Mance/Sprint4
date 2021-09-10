@@ -16,16 +16,20 @@ public class Deleta extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
+	public Deleta() {
+        super();
+    }
+	
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-		int id = Integer.parseInt(req.getParameter("id"));
+		String email = req.getParameter("email");
 
-		if(!AgileDAO.deletarUsuario(id)) {
+		if(!AgileDAO.deletarUsuario(email)) {
 			req.setAttribute("message", "Insucesso ao Deletar.");
 		}
 
 		req.setAttribute("message", "Sucesso ao Deletar.");
-		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("usuarios.jsp");
 		dispatcher.forward(req, res);
 	}
 }

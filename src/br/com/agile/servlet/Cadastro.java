@@ -35,10 +35,11 @@ public class Cadastro extends HttpServlet {
 
 		if(!AgileDAO.cadastrarUsuario(usuario)) {
 			req.setAttribute("message", "Insucesso ao cadastrar.");
+		} else {
+			req.setAttribute("message", "Sucesso ao cadastrar.");
 		}
 
-		req.setAttribute("message", "Sucesso ao cadastrar.");
-		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("cadastro.jsp");
 		dispatcher.forward(req, res);
 
 	}

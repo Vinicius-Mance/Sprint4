@@ -11,18 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/usuarios.css">
-    <title>Ver usuários</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Ver usuï¿½rios</title>
     <link rel="icon" href="./img/gitgoodLogo.png">
   </head>
   <body>
     <header>
-    <link rel="stylesheet" href="./css/header.css">
       <nav>
         <ul>
           <img src="./img/white-logo.svg" alt="BlueBenx">
-          <li><a href="usuarios.jsp">Ver usuários</a></li>
-          <li><a href="deletar.jsp">Deletar usuários</a></li>
-          <li><a href="alterar.jsp">Alterar usuários</a></li>
+          <li><a href="usuarios.jsp">Ver usuï¿½rios</a></li>
+          <li><a href="deletar.jsp">Deletar usuï¿½rios</a></li>
+          <li><a href="alterar.jsp">Alterar usuï¿½rios</a></li>
         </ul>
       </nav>
     </header>
@@ -34,7 +34,7 @@
         <th>Nome</th>
         <th>Email</th>
         <th>Senha</th>
-        <th>Número de telefone</th>
+        <th>Nï¿½mero de telefone</th>
         <th>CPF</th>
       </tr>
       <%

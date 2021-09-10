@@ -122,7 +122,7 @@ public class AgileDAO {
 			
 		}
 
-	public static boolean deletarUsuario(int id) {
+	public static boolean deletarUsuario(String email) {
 
 		boolean resultado = false;
 
@@ -130,10 +130,10 @@ public class AgileDAO {
 
 			Connection c = new Conexao().getConnection();
 
-			String sql = "DELETE FROM usuarios WHERE id = ?";
+			String sql = "DELETE FROM usuarios WHERE email = ?";
 
 			PreparedStatement stmt = c.prepareStatement(sql);
-			stmt.setInt(1, id);
+			stmt.setString(1, email);
 			
 			stmt.execute();
 
