@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/forms.css">
+    <link rel="stylesheet" href="./css/usuarios.css">
     <title>Cadastro</title>
     <link rel="icon" href="./img/gitgoodLogo.png">
   </head>
 
   <body>
-    <h1>Criar conta</h1>
+  <jsp:include page="./assets/header.jsp"></jsp:include>
 
     <form action="${pageContext.request.contextPath}/cadastro" id="formularioCadastro" method="post">
     <!-- #campoNome -->
       <div class="campos">
-        <span>Qual é o seu nome?</span>
+        <span>Qual o seu nome?</span>
         <label for="campoNome">Nome
           <input   type="text" id="campoNome" name="nome" placeholder="John Doe">
         </label>
@@ -60,7 +61,7 @@
 
     <!-- #campoCpf -->
       <div class="campos">
-        <span>Qual é o seu CPF?</span>
+        <span>Qual o seu CPF?</span>
         <label for="campoCpf">CPF
         <input   type="text" id="campoCpf" name="cpf" placeholder="123.456.789-09">
         </label>
@@ -69,7 +70,7 @@
 
       <!-- #campoCpf -->
         <div class="campos">
-          <span>Qual é o seu número de telefone?</span>
+          <span>Qual o seu n�mero de telefone?</span>
           <label for="campoTelefone">Telefone
           <input   type="text" id="campoTelefone" name="numero" placeholder="(00) 9-1234-5678">
           </label>

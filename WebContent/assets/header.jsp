@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<header>
+  <nav>
+    <ul>
+      <img src="./img/white-logo.svg" alt="BlueBenx">
+      <li><a href="cadastro.jsp">Cadastrar usuário</a></li>
+      <li><a href="usuarios.jsp">Ver usuários</a></li>
+      <li><a href="deletar.jsp">Deletar usuários</a></li>
+      <li><a href="alterar.jsp">Alterar usuários</a></li>
+    </ul>
+  </nav>
+</header>

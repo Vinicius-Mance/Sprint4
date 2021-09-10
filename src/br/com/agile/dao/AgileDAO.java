@@ -42,7 +42,7 @@ public class AgileDAO {
 			return resultado;
 		}
 		
-		public static boolean alterarUsuario(int id, String nome, String email, String senha, String numero, String cpf) {
+		public static boolean alterarUsuario(String email, String senha) {
 			
 			boolean resultado = false;
 			
@@ -50,16 +50,12 @@ public class AgileDAO {
 				
 				Connection c = new Conexao().getConnection();
 				
-				String sql = "UPDATE USUARIOS SET nome = ?, email = ?,senha = ?, numero = ?, cpf = ? WHERE id=?";
+				String sql = "UPDATE USUARIOS SET senha = ? WHERE email = ?";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
-				
-				stmt.setString(1, nome);
+
+				stmt.setString(1, senha);
 				stmt.setString(2, email);
-				stmt.setString(3, senha);
-				stmt.setString(4, numero);
-				stmt.setString(5, cpf);
-				stmt.setInt(6, id);
 				
 				stmt.execute(); 
 				

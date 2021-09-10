@@ -33,6 +33,7 @@ public class Cadastro extends HttpServlet {
 		usuario.setNumero(numero);
 		usuario.setSenha(senha);
 
+		System.out.println(usuario.toString());
 		if(!AgileDAO.cadastrarUsuario(usuario)) {
 			req.setAttribute("message", "Insucesso ao cadastrar.");
 		} else {

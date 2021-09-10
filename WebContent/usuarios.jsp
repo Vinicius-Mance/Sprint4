@@ -11,22 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/usuarios.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <title>Ver usuï¿½rios</title>
+    <title>Ver usuários</title>
     <link rel="icon" href="./img/gitgoodLogo.png">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <img src="./img/white-logo.svg" alt="BlueBenx">
-          <li><a href="usuarios.jsp">Ver usuï¿½rios</a></li>
-          <li><a href="deletar.jsp">Deletar usuï¿½rios</a></li>
-          <li><a href="alterar.jsp">Alterar usuï¿½rios</a></li>
-        </ul>
-      </nav>
-    </header>
-
+	<jsp:include page="./assets/header.jsp"></jsp:include>
     <main>
       <table>
       <tr>
@@ -34,7 +23,7 @@
         <th>Nome</th>
         <th>Email</th>
         <th>Senha</th>
-        <th>Nï¿½mero de telefone</th>
+        <th>Número de telefone</th>
         <th>CPF</th>
       </tr>
       <%
@@ -62,6 +51,7 @@
      	 e.printStackTrace();
       }
       %>
+      </table>
     </main>
 
     <script type="text/javascript" src="./js/usuarios.js"></script>

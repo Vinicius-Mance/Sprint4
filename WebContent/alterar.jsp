@@ -11,60 +11,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/usuarios.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/forms.css">
     <title>Alterar usuários</title>
     <link rel="icon" href="./img/gitgoodLogo.png">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <img src="./img/white-logo.svg" alt="BlueBenx">
-          <li><a href="usuarios.jsp">Ver usuários</a></li>
-          <li><a href="deletar.jsp">Deletar usuários</a></li>
-          <li><a href="alterar.jsp">Alterar usuários</a></li>
-        </ul>
-      </nav>
-    </header>
+    <jsp:include page="./assets/header.jsp"></jsp:include>
+      <main>
+      <form class="" action="${pageContext.request.contextPath}/altera" method="post">
 
-    <main>
-      <table>
-      <tr>
-    	<th>ID</th>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Senha</th>
-        <th>Número de telefone</th>
-        <th>CPF</th>
-      </tr>
-      <%
-      try {
-    	 Connection c = new Conexao().getConnection();
+        <div class="campos">
+          <span>Insira do email do usuário a ser alterado</span>
+          <label for="email">Email a ser alterado
+            <input type="email" name="email" value="" placeholder="email@hotmail.com">
+        </label>
+        </div>
 
-			String sql = "SELECT * FROM usuarios";
+        <div class="campos">
 
-			PreparedStatement stmt = c.prepareStatement(sql);
-			ResultSet resultado = stmt.executeQuery();
-      while(resultado.next()) {
-      %>
-      <tr>
-        <td><%=resultado.getInt("id") %></td>
-        <td><%=resultado.getString("nome") %></td>
-        <td><%=resultado.getString("email") %></td>
-        <td><%=resultado.getString("senha") %></td>
-        <td><%=resultado.getString("numero") %></td>
-        <td><%=resultado.getString("cpf") %></td>
-        
-      </tr>
-      <%
-      }
-      c.close();
-      } catch (Exception e) {
-     	 e.printStackTrace();
-      }
-      %>
+          <span>Insira a nova senha</span>
+
+          <div id="grupoSenha">
+
+            <label for="campoSenha">
+                Nova senha
+            </label>
+
+            <input type="password" id="campoSenha" name="senha" placeholder="*********">
+
+            <div id="iconesOlhos">
+              <img src="./img/eye-icon.svg" id="verSenha" alt="ver senha">
+              <img src="./img/closed-eye-icon.png" id="esconderSenha" alt="ver senha">
+            </div>
+
+          </div>
+
+          <span class="erro" id="erroSenha"></span>
+        </div>
+            <button type="submit" name="button">Atualizar senha</button>
+      </form>
     </main>
 
-    <script type="text/javascript" src="./js/usuarios.js"></script>
+    <script type="text/javascript" src="./js/alterar.js"></script>
   </body>
 </html>

@@ -1,3 +1,41 @@
+header {
+  width: 100%;
+  background-color: var(--blue-theme);
+  text-align: center;
+  height: 100px;
+  font-size: 1.5rem;
+}
+
+nav {
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+}
+
+ul {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul li {
+  width: calc(20% - 40px);
+  height: 2rem;
+}
+
+ul li a, ul li img {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: inherit;
+}
+
+ul li a:hover {
+  color: var(--light-blue);
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;

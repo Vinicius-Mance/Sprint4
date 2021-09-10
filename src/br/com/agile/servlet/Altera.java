@@ -19,29 +19,18 @@ public class Altera extends HttpServlet {
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-		int id = Integer.parseInt(req.getParameter("id"));
-		String nome = req.getParameter("nome");
+
 		String email = req.getParameter("email");
-		String numero = req.getParameter("numero");
 		String senha = req.getParameter("senha");
-		String cpf = req.getParameter("cpf");
 
-		Usuario usuario = new Usuario();
 
-		usuario.setId(id);
-		usuario.setNome(nome);
-		usuario.setEmail(email);
-		usuario.setCPF(cpf);
-		usuario.setNumero(numero);
-		usuario.setSenha(senha);
-
-		if(!AgileDAO.alterarUsuario(id,nome,email,senha,numero,cpf)) {
+		if(!AgileDAO.alterarUsuario(email,senha)) {
 			req.setAttribute("message", "Insucesso ao Alterar.");
 		} else {
 			req.setAttribute("message", "Sucesso ao Alterar.");
 		}
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("alterar.jsp");
 		dispatcher.forward(req, res);
 	}
 }

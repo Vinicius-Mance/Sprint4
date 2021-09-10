@@ -11,27 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/usuarios.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <title>Deletar usuï¿½rios</title>
+    <link rel="stylesheet" href="./css/forms.css">
+    <title>Deletar usuários</title>
     <link rel="icon" href="./img/gitgoodLogo.png">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <img src="./img/white-logo.svg" alt="BlueBenx">
-          <li><a href="usuarios.jsp">Ver usuï¿½rios</a></li>
-          <li><a href="deletar.jsp">Deletar usuï¿½rios</a></li>
-          <li><a href="alterar.jsp">Alterar usuï¿½rios</a></li>
-        </ul>
-      </nav>
-    </header>
-
+   <jsp:include page="./assets/header.jsp"></jsp:include>
     <main>
     <form action="${pageContext.request.contextPath}/deleta" method="post">
-      <span>Coloque o e-mail do usuÃ¡rio que deseja deletar</span>
-      <label for="id">ID</label>
-      <input type="email" name="email" value="">
+
+      <div class="campos">
+        <span>Coloque o email do usuário a ser deletado</span>
+
+        <label for="campoEmail">
+          E-mail
+          <input type="email" id="campoEmail" name="email" placeholder="seuemail@hotmail.com">
+        </label>
+      </div>
+
+          <button type="submit" name="button">Apagar usuário</button>
     </form>
     </main>
     <script type="text/javascript" src="./js/deletar.js"></script>
