@@ -154,4 +154,45 @@ public class AgileDAO {
 		return resultado;
 
 	}
+	
+	public static Usuario verUsuarios(int id) {
+
+		Usuario usuario = new Usuario();
+		
+		try {
+			
+			Connection c = new Conexao().getConnection();
+			
+			String sql = "SELECT id, nome, email, senha, numero, cpf FROM usuarios WHERE id = ?";
+			
+			PreparedStatement stmt = c.prepareStatement(sql);
+			stmt.setInt(1,id);
+			ResultSet resultado = stmt.executeQuery();
+			
+			while (resultado.next()) {
+				usuario.setId(resultado.getInt("id"));
+				usuario.setNome(resultado.getString("nome"));
+				usuario.setEmail(resultado.getString("email"));
+				usuario.setSenha(resultado.getString("senha"));
+				usuario.setCPF(resultado.getString("cpf"));
+				usuario.setNumero(resultado.getString("numero"));
+			}
+			
+			stmt.execute(); 
+			
+			stmt.close();
+
+			c.close();	
+			
+		} catch (SQLException e) {
+			
+			System.out.print("Erro: ");
+			
+			e.printStackTrace();
+			
+		}
+		
+		return usuario;
+		
+	}
 }
