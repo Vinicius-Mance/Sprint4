@@ -18,12 +18,13 @@
   <body>
     <jsp:include page="./assets/header.jsp"></jsp:include>
       <main>
+      <p>${message}</p>
       <form class="" action="${pageContext.request.contextPath}/altera" method="post">
 
         <div class="campos">
           <span>Insira do email do usuário a ser alterado</span>
           <label for="email">Email a ser alterado
-            <input type="email" name="email" value="" placeholder="email@hotmail.com">
+            <input pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required type="email" name="email" value="" placeholder="email@hotmail.com">
         </label>
         </div>
 
@@ -37,7 +38,7 @@
                 Nova senha
             </label>
 
-            <input type="password" id="campoSenha" name="senha" placeholder="*********">
+            <input required type="password" id="campoSenha" name="senha" placeholder="*********">
 
             <div id="iconesOlhos">
               <img src="./img/eye-icon.svg" id="verSenha" alt="ver senha">

@@ -25,7 +25,7 @@ const validarCampoEmail = () => {
 
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     .test(campoEmail.value)) {
-      erroEmail.innerHTML = "Insira um email vÃ¡lido";
+      erroEmail.innerHTML = "Insira um email válido";
       return false;
     } else {
       return true;
@@ -91,7 +91,7 @@ const mascaraCpf = () => {
   .replace(/(-\d{2})\d+?$/, '$1');
 
     if (!testarCpf(campoCpf)) {
-      erroCpf.innerHTML = "Insira um CPF vÃ¡lido";
+      erroCpf.innerHTML = "Insira um CPF válido";
       return false;
     } else {
       return true;
@@ -170,7 +170,7 @@ const mascaraTelefone = () => {
     .replace(/(-\d{4})\d+?$/, '$1')
 
     if (campoTelefone.value.replace(/\D+/g, '').length < 10) {
-      erroTelefone.innerHTML = "Insira um nÃºmero vÃ¡lido";
+      erroTelefone.innerHTML = "Insira um número válido";
       return false;
     } else {
       return true;

@@ -18,6 +18,7 @@
   <body>
    <jsp:include page="./assets/header.jsp"></jsp:include>
     <main>
+    <p>${message}</p>
     <form action="${pageContext.request.contextPath}/deleta" method="post">
 
       <div class="campos">
@@ -32,6 +33,5 @@
           <button type="submit" name="button">Apagar usuário</button>
     </form>
     </main>
-    <script type="text/javascript" src="./js/deletar.js"></script>
   </body>
 </html>

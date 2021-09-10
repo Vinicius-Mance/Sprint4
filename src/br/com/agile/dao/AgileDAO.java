@@ -71,13 +71,15 @@ public class AgileDAO {
 				
 				e.printStackTrace();
 				
+				resultado = false;
+				
 			}
 			
 			return resultado;
 			
 		}
 		
-		public static Usuario selecionarUsuario(int id) {
+		public static Usuario selecionarUsuario(String email) {
 
 			Usuario usuario = new Usuario();
 			
@@ -85,10 +87,11 @@ public class AgileDAO {
 				
 				Connection c = new Conexao().getConnection();
 				
-				String sql = "SELECT id, nome, email, senha, numero, cpf FROM usuarios WHERE id = ?";
+				String sql = "SELECT id, nome, email, senha, numero, cpf FROM usuarios WHERE email = ?";
 				
 				PreparedStatement stmt = c.prepareStatement(sql);
-				stmt.setInt(1,id);
+				stmt.setString(1, email);
+				
 				ResultSet resultado = stmt.executeQuery();
 				
 				while (resultado.next()) {

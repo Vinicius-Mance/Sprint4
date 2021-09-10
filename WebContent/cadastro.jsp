@@ -14,13 +14,13 @@
 
   <body>
   <jsp:include page="./assets/header.jsp"></jsp:include>
-
+  <p>${message}</p>
     <form action="${pageContext.request.contextPath}/cadastro" id="formularioCadastro" method="post">
     <!-- #campoNome -->
       <div class="campos">
         <span>Qual o seu nome?</span>
         <label for="campoNome">Nome
-          <input   type="text" id="campoNome" name="nome" placeholder="John Doe">
+          <input required type="text" id="campoNome" name="nome" placeholder="John Doe">
         </label>
         <span class="erro" id="erroNome"></span>
       </div>
@@ -31,7 +31,7 @@
 
         <label for="campoEmail">
           E-mail
-          <input   type="email" id="campoEmail" name="email" placeholder="seuemail@hotmail.com">
+          <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" id="campoEmail" name="email" placeholder="seuemail@hotmail.com">
         </label>
         <span class="erro" id="erroEmail"></span>
       </div>
@@ -47,7 +47,7 @@
               Senha
           </label>
 
-          <input type="password" id="campoSenha" name="senha" placeholder="*********">
+          <input required type="password" id="campoSenha" name="senha" placeholder="*********">
 
           <div id="iconesOlhos">
             <img src="./img/eye-icon.svg" id="verSenha" alt="ver senha">
@@ -63,7 +63,7 @@
       <div class="campos">
         <span>Qual o seu CPF?</span>
         <label for="campoCpf">CPF
-        <input   type="text" id="campoCpf" name="cpf" placeholder="123.456.789-09">
+        <input required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}.[0-9]{2}" type="text" id="campoCpf" name="cpf" placeholder="123.456.789-09">
         </label>
         <span class="erro" id="erroCpf"></span>
       </div>
@@ -72,12 +72,12 @@
         <div class="campos">
           <span>Qual o seu número de telefone?</span>
           <label for="campoTelefone">Telefone
-          <input   type="text" id="campoTelefone" name="numero" placeholder="(00) 9-1234-5678">
+          <input required pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" type="text" id="campoTelefone" name="numero" placeholder="(00) 9-1234-5678">
           </label>
           <span class="erro" id="erroTelefone"></span>
         </div>
       <button type="submit" id="botaoEnviar" name="button">
-        AvanÃ§ar
+        Enviar
       </button>
     </form>
 

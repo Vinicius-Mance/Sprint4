@@ -51,3 +51,8 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+p {
+  text-align: center;
+  font-weight: bold;
+}

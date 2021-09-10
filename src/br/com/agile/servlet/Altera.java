@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.agile.beans.*;
 import br.com.agile.dao.AgileDAO;
+import br.com.agile.beans.Usuario;
 
 @WebServlet("/altera")
 public class Altera extends HttpServlet {
@@ -22,7 +22,14 @@ public class Altera extends HttpServlet {
 
 		String email = req.getParameter("email");
 		String senha = req.getParameter("senha");
-
+		
+		Usuario usuario = AgileDAO.selecionarUsuario(email);
+		
+		if (usuario.getEmail() == null) {
+			req.setAttribute("message", "Usuário não existe.");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("alterar.jsp");
+			dispatcher.forward(req, res);
+		}
 
 		if(!AgileDAO.alterarUsuario(email,senha)) {
 			req.setAttribute("message", "Insucesso ao Alterar.");

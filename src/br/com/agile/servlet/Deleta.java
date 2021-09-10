@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.agile.beans.Usuario;
 import br.com.agile.dao.AgileDAO;
 
 @WebServlet("/deleta")
@@ -24,12 +25,22 @@ public class Deleta extends HttpServlet {
 
 		String email = req.getParameter("email");
 
-		if(!AgileDAO.deletarUsuario(email)) {
-			req.setAttribute("message", "Insucesso ao Deletar.");
+		Usuario usuario = AgileDAO.selecionarUsuario(email);
+		
+		if (usuario.getEmail() == null) {
+			req.setAttribute("message", "Usuário não existe.");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("deletar.jsp");
+			dispatcher.forward(req, res);
 		}
 
-		req.setAttribute("message", "Sucesso ao Deletar.");
-		RequestDispatcher dispatcher = req.getRequestDispatcher("usuarios.jsp");
+		if(!AgileDAO.deletarUsuario(email)) {
+			req.setAttribute("message", "Insucesso ao Deletar.");
+		} else {
+			req.setAttribute("message", "Sucesso ao Deletar.");
+		}
+
+
+		RequestDispatcher dispatcher = req.getRequestDispatcher("deletar.jsp");
 		dispatcher.forward(req, res);
 	}
 }
