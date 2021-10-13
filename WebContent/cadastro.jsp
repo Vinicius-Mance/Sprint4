@@ -72,7 +72,7 @@
         <div class="campos">
           <span>Qual o seu número de telefone?</span>
           <label for="campoTelefone">Telefone
-          <input required pattern="^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$" type="text" id="campoTelefone" name="numero" placeholder="(00) 9-1234-5678">
+          <input required type="text" id="campoTelefone" name="numero" placeholder="(00) 9-1234-5678">
           </label>
           <span class="erro" id="erroTelefone"></span>
         </div>

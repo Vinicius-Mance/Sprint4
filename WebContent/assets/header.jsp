@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul>
-      <img src="./img/white-logo.svg" alt="BlueBenx">
+      <li>Tailwind Traders</li>
       <li><a href="cadastro.jsp">Cadastrar usuário</a></li>
       <li><a href="usuarios.jsp">Ver usuários</a></li>
       <li><a href="deletar.jsp">Deletar usuários</a></li>

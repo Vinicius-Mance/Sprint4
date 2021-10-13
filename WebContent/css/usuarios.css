@@ -23,6 +23,7 @@ ul {
 ul li {
   width: calc(20% - 40px);
   height: 2rem;
+  color: #fff;
 }
 
 ul li a, ul li img {
