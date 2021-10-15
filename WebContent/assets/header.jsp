@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul>
-      <li>Tailwind Traders</li>
+      <li>BlueBenx</li>
       <li><a href="cadastro.jsp">Cadastrar usuário</a></li>
       <li><a href="index.jsp">Ver usuários</a></li>
       <li><a href="deletar.jsp">Deletar usuários</a></li>
