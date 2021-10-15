@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Sprint3" />
+        <module name="Sprint4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Sprint3" target="16" />
+      <module name="Sprint4" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>
