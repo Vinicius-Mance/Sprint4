@@ -5,27 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c247f50-8786-4a4d-b15b-fcb2229060cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/wrapper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/alterar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/alterar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/assets/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/assets/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/cadastro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/cadastro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/css/usuarios.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/css/usuarios.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/deletar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/deletar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/img/closed-eye-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/img/closed-eye-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/img/eye-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/img/eye-icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/img/trash-bin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/img/trash-bin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/alterar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/js/alterar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/cadastro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/js/cadastro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebContent/js/functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +18,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1zYf1dxgzpJ7vWA12w3SsLs1sYi" />
   <component name="ProjectViewState">
